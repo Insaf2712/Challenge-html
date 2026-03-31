@@ -4,83 +4,178 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brownie: {
+                primary: "#7b2869",
+                accent: "#9d3c72",
+                bg: "#f3e5f5",
+                prep: "#fff5fb",
+              },
+            },
+            fontFamily: {
+              serif: ["Young Serif", "serif"],
+              sans: ["Outfit", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/css">
+      .nutrition-row:last-of-type hr {
+        display: none;
+      }
+    </style>
   </head>
-  <body>
-    <header>
-      <h1>Brownies Recipe</h1>
-      <img
-        src="https://www.einfachbacken.de/sites/einfachbacken.de/files/styles/facebook/public/2018-07/brownies-1_zuschnitt_bearb-png-converted.jpg?h=7cece4cc&itok=csyujo4o"
-        alt="Brownies-pic"
-      />
-    </header>
-    <main>
-      <section>
-        <p>Fudgy, sweet, and sprinkled with a pinch of joy ✨🍫</p>
-      </section>
-      <section>
-        <h2>Preparation time:</h2>
-        <ul>
-          <li>Preparation time : 20 min</li>
-          <li>Cooking time : 20-25 min</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Ingrediets:</h2>
-        <ul>
-          <li>170g melted butter</li>
-          <li>180g sugar</li>
-          <li>2 eggs</li>
-          <li>1 tsp vanilla</li>
-          <li>100g melted chocolate</li>
-          <li>110g flour</li>
-          <li>30g cacoa powder</li>
-          <li>A pinch of salt</li>
-          <li>100g chocolate chips</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Instructions:</h2>
-        <ol>
-          <li>
-            Preheat oven to 180°C , and Prepare your baking pan with
-            parchment paper.
-          </li>
-          <li>
-            Melt the butter and chocolate together, then let the mixture cool
-            slightly.
-          </li>
-          <li>
-            In a separate bowl, whisk the eggs and sugar until smooth. Add the
-            vanilla and mix well.
-          </li>
-          <li>
-            Pour the melted chocolate mixture into the egg mixture and stir
-            until combined.
-          </li>
-          <li>
-            Add the dry ingredients (flour, cacao powder, and salt), Mix gently
-            until just combined (do not overmix).
-          </li>
-          <li>Fold in the chocolate chips.</li>
-          <li>You can add any topping you want (optional).</li>
-          <li>Pour the batter into the prepared pan and spread evenly.</li>
-          <li>
-            Bake for 20–25 minutes, until the edges are set and the center is
-            slightly soft.
-          </li>
-          <li>Let cool completely before slicing and serving.</li>
-        </ol>
-      </section>
-      <section>
-        <h2>Nutrition:</h2>
-        <span> Calories: 300 kcal</span>
-        <hr />
-        <span> Carbs: 40g </span>
-        <hr />
-        <span> Proteins: 5g </span>
-        <hr />
-        <span> Fat: 21g</span>
-      </section>
-    </main>
+  <body
+    class="bg-brownie-bg font-sans text-[#2c2c2c] flex justify-center items-center min-h-screen p-5 md:p-10"
+  >
+    <div
+      class="max-w-[736px] w-full bg-white rounded-[20px] overflow-hidden shadow-xl"
+    >
+      <header class="p-0">
+        <img
+          src="https://www.einfachbacken.de/sites/einfachbacken.de/files/styles/facebook/public/2018-07/brownies-1_zuschnitt_bearb-png-converted.jpg?h=7cece4cc&itok=csyujo4o"
+          alt="Brownies-pic"
+          class="w-full h-auto block"
+        />
+        <h1
+          class="font-serif text-[#312e2c] text-4xl md:text-5xl mt-8 mb-5 px-10"
+        >
+          Brownies Recipe
+        </h1>
+      </header>
+      <main class="px-10 pb-10">
+        <section class="py-7 border-b border-[#f2f2f2]">
+          <p class="text-[#5f5665]">
+            Fudgy, sweet, and sprinkled with a pinch of joy ✨🍫
+          </p>
+        </section>
+
+        <section class="bg-brownie-prep p-6 rounded-xl my-8">
+          <h2 class="font-sans font-bold text-xl text-brownie-accent mb-4">
+            Preparation time
+          </h2>
+          <ul class="list-disc pl-6 space-y-2 marker:text-brownie-primary">
+            <li class="pl-4">
+              <strong>Total</strong>: Approximately 45 minutes
+            </li>
+            <li class="pl-4"><strong>Preparation</strong>: 20 minutes</li>
+            <li class="pl-4"><strong>Cooking</strong>: 20-25 minutes</li>
+          </ul>
+        </section>
+
+        <section class="py-7 border-b border-[#f2f2f2]">
+          <h2 class="font-serif text-brownie-primary text-3xl mb-5">
+            Ingredients
+          </h2>
+          <ul class="list-disc pl-6 space-y-2 marker:text-brownie-primary">
+            <li class="pl-4 text-[#5f5665]">170g melted butter</li>
+            <li class="pl-4 text-[#5f5665]">180g sugar</li>
+            <li class="pl-4 text-[#5f5665]">2 eggs</li>
+            <li class="pl-4 text-[#5f5665]">1 tsp vanilla</li>
+            <li class="pl-4 text-[#5f5665]">100g melted chocolate</li>
+            <li class="pl-4 text-[#5f5665]">110g flour</li>
+            <li class="pl-4 text-[#5f5665]">30g cacoa powder</li>
+            <li class="pl-4 text-[#5f5665]">A pinch of salt</li>
+            <li class="pl-4 text-[#5f5665]">100g chocolate chips</li>
+          </ul>
+        </section>
+
+        <section class="py-7 border-b border-[#f2f2f2]">
+          <h2 class="font-serif text-brownie-primary text-3xl mb-5">
+            Instructions
+          </h2>
+          <ol
+            class="list-decimal pl-6 space-y-2 marker:text-brownie-primary marker:font-bold"
+          >
+            <li class="pl-4 text-[#5f5665]">
+              Preheat oven to 180°C, and Prepare your baking pan with parchment
+              paper.
+            </li>
+            <li class="pl-4 text-[#5f5665]">
+              Melt the butter and chocolate together, then let the mixture cool
+              slightly.
+            </li>
+            <li class="pl-4 text-[#5f5665]">
+              In a separate bowl, whisk the eggs and sugar until smooth. Add the
+              vanilla and mix well.
+            </li>
+            <li class="pl-4 text-[#5f5665]">
+              Pour the melted chocolate mixture into the egg mixture and stir
+              until combined.
+            </li>
+            <li class="pl-4 text-[#5f5665]">
+              Add the dry ingredients (flour, cacao powder, and salt), Mix
+              gently until just combined (do not overmix).
+            </li>
+            <li class="pl-4 text-[#5f5665]">Fold in the chocolate chips.</li>
+            <li class="pl-4 text-[#5f5665]">
+              You can add any topping you want (optional).
+            </li>
+            <li class="pl-4 text-[#5f5665]">
+              Pour the batter into the prepared pan and spread evenly.
+            </li>
+            <li class="pl-4 text-[#5f5665]">
+              Bake for 20–25 minutes, until the edges are set and the center is
+              slightly soft.
+            </li>
+            <li class="pl-4 text-[#5f5665]">
+              Let cool completely before slicing and serving.
+            </li>
+          </ol>
+        </section>
+
+        <section class="py-7 border-none">
+          <h2 class="font-serif text-brownie-primary text-3xl mb-5">
+            Nutrition
+          </h2>
+          <p class="text-[#5f5665] mb-5">
+            The table below shows nutritional values per serving without the
+            optional toppings.
+          </p>
+          <div class="space-y-3">
+            <div class="nutrition-row">
+              <div class="flex justify-between px-6 py-1">
+                <span class="text-[#5f5665]">Calories</span>
+                <span class="text-brownie-primary font-bold">300 kcal</span>
+              </div>
+              <hr class="border-[#f2f2f2] mx-6 mt-2" />
+            </div>
+            <div class="nutrition-row">
+              <div class="flex justify-between px-6 py-1">
+                <span class="text-[#5f5665]">Carbs</span>
+                <span class="text-brownie-primary font-bold">40g</span>
+              </div>
+              <hr class="border-[#f2f2f2] mx-6 mt-2" />
+            </div>
+            <div class="nutrition-row">
+              <div class="flex justify-between px-6 py-1">
+                <span class="text-[#5f5665]">Proteins</span>
+                <span class="text-brownie-primary font-bold">5g</span>
+              </div>
+              <hr class="border-[#f2f2f2] mx-6 mt-2" />
+            </div>
+            <div class="nutrition-row">
+              <div class="flex justify-between px-6 py-1">
+                <span class="text-[#5f5665]">Fat</span>
+                <span class="text-brownie-primary font-bold">21g</span>
+              </div>
+              <hr class="border-[#f2f2f2] mx-6 mt-2" />
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
